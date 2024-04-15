@@ -6,9 +6,201 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Title</title>
     <link rel="stylesheet" href="screen.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
   </head>
   <body>
-    <h1>Heading</h1>
-    <script src="index.js"></script>
+
+    <div class="nav">
+      <div class="absolute px-12 py-6">
+        <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown" class="px-5 py-2 border border-slate-200 text-gray-900 bg-white font-semibold rounded-lg text-base text-center inline-flex items-center shadow-sm hover:drop-shadow" type="button">Popular 
+          <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+          </svg>
+        </button>
+          
+        <div id="dropdown" class="z-10 hidden bg-white divide-y divide-gray-100 rounded-lg shadow w-44">
+          <ul class="py-2 text-sm text-black" aria-labelledby="dropdownDefaultButton">
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200">Popular</a>
+            </li>
+            <li>
+              <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200">New & Noteworthy</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="hidden sm:ml-6 sm:block py-7">
+        <div class="place-content-center flex space-x-4">
+            <a href="#" class="bg-gray-200 text-black rounded-full px-5 py-2 text-sm font-bold" aria-current="page">Discover</a>
+            <a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold">Animation</a>
+            <a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold">Branding</a>
+            <a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold">Illustration</a>
+            <a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold">Mobile</a>
+            <a href="#" class="text-black hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-bold">Print</a>
+        </div>
+      </div>
+
+      <div class="filterbutton">
+        <div class="absolute top-0 right-0 h-16 w-30 px-14 py-6">
+          <button
+          data-ripple-light="true"
+          data-collapse-target="collapse"
+          class="px-5 py-2 border border-slate-200 text-gray-900 bg-white font-md rounded-full text-base text-center inline-flex items-center shadow-sm hover:drop-shadow">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-4 h-4">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+          </svg>&nbsp;
+           Filters
+          </button>
+        </div>
+      </div>
+    </div>
+
+      <div data-collapse="collapse" class="block h-0 w-full basis-full overflow-hidden transition-all duration-300 ease-in-out">
+        <div class="relative mx-auto my-4 flex w-8/12 flex-col rounded-xl bg-white bg-clip-border text-gray-700">
+          <div class="container mx-auto">
+            <div class="grid grid-cols-3 gap-4">
+                <div class="flex flex-col">
+                    <label for="input1" class="mb-2 text-sm font-semibold">Tags</label>
+                    <input id="input1" type="text" class="px-4 py-2 border border-slate-200 text-gray-900 bg-white font-md rounded-lg text-sm text-left inline-flex items-center shadow-sm hover:drop-shadow" placeholder="Search">
+                </div>
+                <div class="flex flex-col">
+                    <label for="input2" class="mb-2 text-sm font-semibold">Color</label>
+                    <input id="input2" type="text" class="px-4 py-2 border border-slate-200 text-gray-900 bg-white font-md rounded-lg text-sm text-left inline-flex items-center shadow-sm hover:drop-shadow" placeholder="Enter hex or select">
+                </div>
+                <div class="flex flex-col">
+                    <label for="input3" class="mb-2 text-sm font-semibold">Timeframe</label>
+                    <button id="dropdownDefaultButton" data-dropdown-toggle="dropdown2" class="px-8 py-2 border border-slate-200 text-gray-900 bg-white font-md rounded-lg text-sm text-center inline-flex items-center shadow-sm hover:drop-shadow" type="button">Select a Timeframe
+                      <svg class="w-2.5 h-2.5 ms-3" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+                        <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m1 1 4 4 4-4"/>
+                      </svg>
+                    </button>
+                      
+                    <div id="dropdown2" class="w-52 z-10 hidden bg-white  rounded-lg shadow w-44">
+                      <ul class="py-2 text-sm text-black" aria-labelledby="dropdownDefaultButton">
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200">All Time</a>
+                        </li>
+                        <li>
+                          <a href="#" class="block px-4 py-2 hover:bg-gray-100 dark:hover:bg-gray-200">Now</a>
+                        </li>
+                      </ul>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="posts">
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 mx-0"> 
+              <div class="grid-item">
+                <img src="images/kolor.png" alt="Image 1" class=" rounded-md">
+                <div class="info">
+                  <svg class="w-9" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                  </svg>
+                  <p>Kolors</p>
+                  <div class="stats">
+                    <p class="text-right"><svg class="hover:bg-sky-700 w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>&nbsp;36&nbsp;<svg class="mb-1
+                    w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                   </svg>
+                   33.4k</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="images/welfare.png" alt="Image 2" class="rounded-md">
+                <div class="info">
+                  <p>Welfare</p>
+                  <div class="stats">
+                    <p class="text-right"><svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>&nbsp;67&nbsp;<svg class="mb-1
+                    w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                   </svg>
+                   37.3k</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                  <img src="images/saru.png" alt="Image 3" class="rounded-md">
+                  <div class="info">
+                    <p>Saru</p>
+                    <div class="stats">
+                      <p class="text-right"><svg class="mb-1 w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                      </svg>&nbsp;238&nbsp;<svg class="mb-1
+                       w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      </svg>
+                      57.4k</p>
+                    </div>
+                  </div>
+              </div>
+              <div class="grid-item">
+                <img src="images/rock.jpg" alt="Image 3" class="rounded-md">
+                <div class="info">
+                  <p>Rocks</p>
+                  <div class="stats">
+                    <p class="text-right"><svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>&nbsp;97&nbsp;<svg class="mb-1
+                    w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                   </svg>
+                   1.4k</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="images/cassettegif.gif" alt="Image 3" class="rounded-md">
+                <div class="info">
+                  <p>Cassette</p>
+                  <div class="stats">
+                    <p class="text-right"><svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>&nbsp;48&nbsp;<svg class="mb-1
+                    w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                   </svg>
+                   8.9k</p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid-item">
+                <img src="images/fake.png" alt="Image 3" class="rounded-md">
+                <div class="info">
+                  <p>Fake</p>
+                  <div class="stats">
+                    <p class="text-right place-content-right"><svg class="w-6 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                      <path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z" />
+                    </svg>&nbsp;48&nbsp;<svg class="mb-1
+                    w-5 inline-block" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                     <path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                   </svg>
+                   7.3k</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+
+
+      <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/collapse.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
   </body>
 </html>
